@@ -59,6 +59,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
+  // background-attachment: fixed;
 
   min-height: 100vh;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-grey-light-1);
 }
