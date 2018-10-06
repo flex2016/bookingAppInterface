@@ -1,102 +1,95 @@
 .container {
-  max-width: 120rem;
-  margin: 8rem auto;
   background-color: var(--color-grey-light-1);
-  box-shadow: var(--shadow-dark);
-
+  box-shadow: var(--shadow-dark-1);
+  margin: 8rem auto;
+  max-width: 120rem; // 1200px
   min-height: 50rem;
 
   @media only screen and (max-width: $bp-largest) {
-    margin: 0;
-    max-width: 100%;
-    width: 100%;
+      margin: 0;
+      max-width: 100%;
+      width: 100%;
+  }
 }
-
-
-}
-
 
 .header {
-  font-size: 1.4rem;
-  height: 7rem;
-  background-color: #fff;
+  align-items: center;
+  background-color: var(--color-white);
   border-bottom: var(--line);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  font-size: 1.4rem;
+  height: 7rem;
+  justify-content: space-between; // aligns flex items along main axis
 
   @media only screen and (max-width: $bp-smallest) {
-    flex-wrap: wrap;
-    align-content: space-around;
-    height: 11rem;
+      align-content: space-around; // adjust rows
+      flex-wrap: wrap;
+      height: 11rem;
+      margin-bottom: 1.5rem;
   }
-
 }
 
+// Flex Container
 .content {
   display: flex;
 
   @media only screen and (max-width: $bp-medium) {
-    flex-direction: column;
+      flex-direction: column;
   }
-
 }
 
+// Flex Item
 .sidebar {
   background-color: var(--color-grey-dark-1);
-
-  flex: 0 0 18%;
   display: flex;
+  flex: 0 0 18%; // no grow, no shrink, keep width at 18%
   flex-direction: column;
   justify-content: space-between;
-
-
 }
 
+// Flex Item
 .hotel-view {
-  background-color: #fff;
-  flex: 1;
-
+  background-color: var(--color-white);
+  flex: 1; // grow as much space as you can
 }
 
 .detail {
-  font-size: 1.4rem;
-  display: flex;
-  padding: 4.5rem;
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line);
+  display: flex;
+  font-size: 1.4rem;
+  padding: 4.5rem;
 
   @media only screen and (max-width: $bp-medium) {
-    padding: 3rem;
+      padding: 3rem;
   }
 
   @media only screen and (max-width: $bp-small) {
-    flex-direction: column;
+      flex-direction: column;
   }
-
 }
 
 .description {
-  background-color: #fff;
-  box-shadow: var(--shadow-light);
-  padding: 3rem;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-light-1);
   flex: 0 0 60%;
   margin-right: 4.5rem;
+  padding: 3rem;
 
   @media only screen and (max-width: $bp-medium) {
-    padding: 2rem;
-    margin-right: 3rem;
+      padding: 2rem;
+      margin-right: 3rem;
   }
+
   @media only screen and (max-width: $bp-small) {
-    margin-right: 0;
-    margin-bottom: 3rem;
+      margin-right: 0;
+      margin-bottom: 3rem;
   }
 }
 
 .user-reviews {
-  flex: 1;
-
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  display: flex;
+  flex: 1; // occupy remaining space
+  flex-direction: column;
 }
