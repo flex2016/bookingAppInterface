@@ -456,11 +456,23 @@
   text-align: center;
   padding: 2.5rem;
 
-  @media only screen and (max-width: $bp-medium) {
-      display: none;
+
+  & a {
+    color: var(--color-grey-light-4);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--color-primary);
+      }
   }
 
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
+
   }
+
+
 
 
 ////////////////////////////////////////
